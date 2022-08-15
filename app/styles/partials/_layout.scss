@@ -1,0 +1,26 @@
+.bl-section {
+    background-color: rgba(map-get($colours, "grey"), 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    &__title {
+        margin: 0;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 10px;
+        color: map-get($colours, "dark");
+    }
+
+    &--inline {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.bl-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 25px auto;
+}

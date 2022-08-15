@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "dev:remix": "remix watch",
+    "dev:arc": "cross-env NODE_ENV=development arc sandbox",
+    "dev": "remix build && concurrently \"run-p \"dev:*\"\" \"yarn sass\"",
+    "start": "cross-env NODE_ENV=production arc sandbox",
+    "sass": "sass --watch app/styles/Blackjack.scss:app/styles/Blackjack.css"
+  },
+  "dependencies": {
+    "@remix-run/architect": "^1.6.4",
+    "@remix-run/node": "^1.6.4",
+    "@remix-run/react": "^1.6.4",
+    "clsx": "^1.2.1",
+    "cross-env": "^7.0.3",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-transition-group": "^4.4.2"
+  },
+  "devDependencies": {
+    "@architect/architect": "^10.3.3",
+    "@remix-run/dev": "^1.6.4",
+    "@remix-run/eslint-config": "^1.6.4",
+    "@types/jest": "^28.1.4",
+    "@types/lodash": "^4.14.182",
+    "@types/react": "^17.0.45",
+    "@types/react-dom": "^17.0.17",
+    "concurrently": "^7.2.2",
+    "eslint": "^8.15.0",
+    "jest": "^28.1.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.53.0",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.6.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

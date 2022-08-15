@@ -1,0 +1,57 @@
+.bl-header {
+    background-color: map-get($colours, "blue");
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        padding: 20px 20px;
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    &__title {
+        font-family: $font-family;
+        color: map-get($colours, "white");
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        // line-height: 1;
+    }
+
+    &__nav {
+        max-width: 1280px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__button {
+        font-family: $font-family;
+        background-color: darken(map-get($colours, "blue"), 10);
+        color: map-get($colours, "white");
+        font-weight: 300;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 3px solid transparent;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out;
+
+        &:hover {
+            background-color: darken(map-get($colours, "blue"), 15);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: map-get($colours, "yellow");
+        }
+
+        &:active {
+            background-color: darken(map-get($colours, "blue"), 25);
+        }
+    }
+}

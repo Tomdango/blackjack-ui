@@ -1,0 +1,87 @@
+.bl-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: map-get($colours, "white");
+    background-color: map-get($colours, "blue");
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid darken(map-get($colours, "blue"), 12);
+    border-right: 2px solid darken(map-get($colours, "blue"), 8);
+    transition: all 100ms linear;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    &:hover {
+        background-color: darken(map-get($colours, "blue"), 4);
+    }
+
+    &:active {
+        margin-top: 2px;
+        margin-left: 1px;
+        border-bottom-width: 1px;
+        border-right-width: 1px;
+        background-color: darken(map-get($colours, "blue"), 8);
+    }
+
+    &:disabled {
+        cursor: auto;
+        margin-top: 2px;
+        margin-left: 1px;
+        border-bottom-width: 1px;
+        border-right-width: 1px;
+        border-color: desaturate(map-get($colours, "blue"), 30);
+        background-color: desaturate(map-get($colours, "blue"), 30);
+    }
+
+    &--green {
+        background-color: map-get($colours, "green");
+        border-bottom: 3px solid darken(map-get($colours, "green"), 12);
+        border-right: 2px solid darken(map-get($colours, "green"), 8);
+
+        &:hover {
+            background-color: darken(map-get($colours, "green"), 4);
+        }
+
+        &:active {
+            background-color: darken(map-get($colours, "green"), 8);
+        }
+
+        &:disabled {
+            border-color: desaturate(map-get($colours, "green"), 50);
+            background-color: desaturate(map-get($colours, "green"), 50);
+        }
+    }
+
+    &--red {
+        background-color: map-get($colours, "red");
+        border-bottom: 3px solid darken(map-get($colours, "red"), 12);
+        border-right: 2px solid darken(map-get($colours, "red"), 8);
+
+        &:hover {
+            background-color: darken(map-get($colours, "red"), 4);
+        }
+
+        &:active {
+            background-color: darken(map-get($colours, "red"), 8);
+        }
+
+        &:disabled {
+            border-color: desaturate(map-get($colours, "red"), 50);
+            background-color: desaturate(map-get($colours, "red"), 50);
+        }
+    }
+
+    &__group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & .bl-button {
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
+    }
+}

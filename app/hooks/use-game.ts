@@ -20,7 +20,9 @@ const useGame = () => {
       dispatch({ type: "GAME::SET_STATUS", status: gameStatus.BUSTED });
       dealerHand.showAllCards();
     }
-  }, [playerHand.isBusted]);
+    // Dispatch is the update function of the useReducer hook and does not change, so is safe to omit.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playerHand.isBusted, dealerHand]);
 
   const start = async () => {
     dispatch({ type: "GAME::RESET" });
